@@ -111,6 +111,19 @@ nav.menu a.cta-menu:hover,nav.menu a.cta-menu[aria-current="page"]{background:va
   .marca b{font-size:.88rem}
 }
 
+
+/* celulares: evitar que el navegador agrande el texto y dar más aire en los bordes */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:clip}
+@media (max-width:600px){
+  .envoltura{padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+  .portada .envoltura h1{font-size:clamp(1.55rem,7.6vw,2.1rem);letter-spacing:.02em;overflow-wrap:anywhere}
+  .portada .envoltura .firma{font-size:clamp(1.7rem,8vw,2.2rem)}
+  .portada .envoltura p.intro{font-size:1rem}
+  .escudo{width:min(170px,46vw)!important;margin-inline:auto;justify-self:center}
+  .portada::before{width:4px}
+}
+
 /* vistas */
 .vista{display:none}
 .vista.activa{display:block;animation:entra .4s ease both}
