@@ -92,7 +92,7 @@ nav.menu a.cta-menu{border:1px solid var(--bordo);color:var(--bordo);margin-left
 nav.menu a.cta-menu::after{display:none}
 nav.menu a.cta-menu:hover,nav.menu a.cta-menu[aria-current="page"]{background:var(--bordo);color:#fff}
 .boton-menu{display:none;margin-left:auto;background:none;border:1px solid var(--linea);color:var(--tinta);font-family:var(--f-titulo);letter-spacing:.14em;font-size:.74rem;padding:9px 14px;cursor:pointer}
-@media (max-width:1020px){
+@media (max-width:1180px){
   .boton-menu{display:block}
   nav.menu{display:none;position:absolute;left:0;right:0;top:100%;background:#7B1E2B;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--linea);padding:8px max(20px,env(safe-area-inset-right,0px)) 16px max(20px,env(safe-area-inset-left,0px))}
   nav.menu.abierto{display:flex}
@@ -100,6 +100,15 @@ nav.menu a.cta-menu:hover,nav.menu a.cta-menu[aria-current="page"]{background:va
   nav.menu a::after{display:none}
   nav.menu a.cta-menu{margin:12px 0 0;text-align:center}
   .franja-lema .envoltura span:last-child{display:none}
+}
+
+
+/* menú de escritorio en una sola línea */
+@media (min-width:1181px){
+  nav.menu{flex-wrap:nowrap;gap:0}
+  nav.menu a{font-size:.7rem;letter-spacing:.1em;padding:8px 9px;white-space:nowrap}
+  nav.menu a.cta-menu{margin-left:10px;padding:10px 14px}
+  .marca b{font-size:.88rem}
 }
 
 /* vistas */
@@ -138,7 +147,7 @@ section.bloque{padding-block:clamp(56px,8vw,104px)}
 .portada .btn.claro{color:#1E1714}
 .portada .btn.contorno{color:#7B1E2B}
 .credenciales{display:flex;flex-wrap:wrap;gap:0;margin-top:28px;border-top:1px solid #E8DEC8;padding-top:18px}
-.credenciales div{padding-right:28px;margin-right:28px;border-right:1px solid #E8DEC8}
+.credenciales div{padding-right:20px;margin-right:20px;border-right:1px solid #E8DEC8}
 .credenciales div:last-child{border-right:0;margin-right:0;padding-right:0}
 .credenciales strong{display:block;font-family:"Cinzel",Georgia,serif;font-size:1.25rem;color:#7B1E2B;font-variant-numeric:tabular-nums;letter-spacing:.04em}
 .credenciales span{font-size:.8rem;color:#8A7A6C;letter-spacing:.02em}
@@ -355,6 +364,10 @@ a.tel:hover{color:var(--punzo)}
 .wa-flotante:hover{background:#17703D;transform:translateY(-2px)}
 .wa-flotante svg{width:22px;height:22px}
 @media (max-width:600px){.wa-flotante span{display:none}.wa-flotante{padding:14px}}
+
+/* textos largos (correo) que no deben ensanchar la página */
+.contacto>*{min-width:0}
+.dato span,.dato a,footer small{overflow-wrap:anywhere}
 
 /* pie */
 footer{background:var(--noche);color:#E8DCC8}
@@ -691,7 +704,7 @@ footer nav a{display:block;font-size:.88rem;color:#D8CBB6;padding:2px 0}
 <div class="poncho fina" aria-hidden="true"></div>
 <footer>
   <div class="envoltura">
-    <img src="img/logo-oscuro.png" alt="">
+    <img src="img/logo-menu.png" alt="">
     <div>
       <p class="firma">Dios, América y Libertad</p>
       <small>Asociación Cultural Heroínas Hispanoamericanas<br>Personería Jurídica Res. Nº 320 · 01-12-2003<br>“Gral. Martín Miguel de Güemes, Héroe de la Nación Argentina”</small>
